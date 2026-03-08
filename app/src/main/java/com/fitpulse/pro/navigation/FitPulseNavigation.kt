@@ -30,6 +30,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -143,12 +144,14 @@ fun FitPulseAppScaffold(viewModel: FitPulseViewModel) {
             }
         }
     ) { paddingValues ->
+        val bottomContentPadding = if (showBottomBar) paddingValues.calculateBottomPadding() else 0.dp
         FitPulseNavHost(
             navController = navController,
             viewModel = viewModel,
             startDestination = startDestination,
+            bottomContentPadding = bottomContentPadding,
             modifier = Modifier.padding(
-                bottom = if (showBottomBar) paddingValues.calculateBottomPadding() else 0.dp
+                bottom = bottomContentPadding
             )
         )
     }
@@ -159,6 +162,7 @@ private fun FitPulseNavHost(
     navController: NavHostController,
     viewModel: FitPulseViewModel,
     startDestination: String,
+    bottomContentPadding: Dp = 0.dp,
     modifier: Modifier = Modifier
 ) {
     NavHost(
@@ -196,6 +200,7 @@ private fun FitPulseNavHost(
         composable(Screen.Workouts.route) {
             WorkoutScreen(
                 viewModel = viewModel,
+                bottomContentPadding = bottomContentPadding,
                 onStartWorkout = { templateId ->
                     startWorkout(navController, viewModel, templateId)
                 },

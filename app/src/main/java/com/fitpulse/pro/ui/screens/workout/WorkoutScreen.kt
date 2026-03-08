@@ -27,6 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fitpulse.pro.data.model.*
@@ -41,6 +42,7 @@ import com.fitpulse.pro.utils.HapticHelper
 @Composable
 fun WorkoutScreen(
     viewModel: FitPulseViewModel,
+    bottomContentPadding: Dp = 0.dp,
     onStartWorkout: (Long) -> Unit,
     onViewWorkoutDetail: (Long) -> Unit,
     onNavigateToExerciseLibrary: () -> Unit,
@@ -176,9 +178,26 @@ fun WorkoutScreen(
         }
 
         // Content
-        when (selectedTab) {
-            0 -> TemplatesTab(templates, onStartWorkout)
-            1 -> HistoryTab(recentWorkouts, onViewWorkoutDetail, onStartWorkout)
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+        ) {
+            when (selectedTab) {
+                0 -> TemplatesTab(
+                    templates = templates,
+                    onStartWorkout = onStartWorkout,
+                    modifier = Modifier.fillMaxSize(),
+                    bottomContentPadding = bottomContentPadding + 24.dp
+                )
+                1 -> HistoryTab(
+                    workouts = recentWorkouts,
+                    onViewDetail = onViewWorkoutDetail,
+                    onStartWorkout = onStartWorkout,
+                    modifier = Modifier.fillMaxSize(),
+                    bottomContentPadding = bottomContentPadding + 24.dp
+                )
+            }
         }
     }
 }
@@ -388,24 +407,30 @@ private fun MiniWorkoutStat(
 }
 
 @Composable
-private fun TemplatesTab(templates: List<WorkoutTemplate>, onStartWorkout: (Long) -> Unit) {
+private fun TemplatesTab(
+    templates: List<WorkoutTemplate>,
+    onStartWorkout: (Long) -> Unit,
+    modifier: Modifier = Modifier,
+    bottomContentPadding: Dp = 0.dp
+) {
     if (templates.isEmpty()) {
         EmptyState(
             icon = Icons.Default.FitnessCenter,
             title = "No Templates Yet",
             subtitle = "Start a workout or create a custom template",
             actionText = "Start empty workout",
-            onAction = { onStartWorkout(-1L) }
+            onAction = { onStartWorkout(-1L) },
+            modifier = modifier
         )
     } else {
         LazyColumn(
-            contentPadding = PaddingValues(horizontal = 20.dp, vertical = 12.dp),
+            modifier = modifier,
+            contentPadding = PaddingValues(start = 20.dp, top = 12.dp, end = 20.dp, bottom = bottomContentPadding),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             items(items = templates, key = { it.id }) { template ->
                 TemplateCard(template = template, onClick = { onStartWorkout(template.id) })
             }
-            item { Spacer(modifier = Modifier.height(100.dp)) }
         }
     }
 }
@@ -468,7 +493,9 @@ private fun TemplateCard(template: WorkoutTemplate, onClick: () -> Unit) {
 private fun HistoryTab(
     workouts: List<Workout>,
     onViewDetail: (Long) -> Unit,
-    onStartWorkout: (Long) -> Unit
+    onStartWorkout: (Long) -> Unit,
+    modifier: Modifier = Modifier,
+    bottomContentPadding: Dp = 0.dp
 ) {
     if (workouts.isEmpty()) {
         EmptyState(
@@ -476,11 +503,13 @@ private fun HistoryTab(
             title = "No Workouts Yet",
             subtitle = "Complete your first workout to see it here",
             actionText = "Start workout",
-            onAction = { onStartWorkout(-1L) }
+            onAction = { onStartWorkout(-1L) },
+            modifier = modifier
         )
     } else {
         LazyColumn(
-            contentPadding = PaddingValues(horizontal = 20.dp, vertical = 12.dp),
+            modifier = modifier,
+            contentPadding = PaddingValues(start = 20.dp, top = 12.dp, end = 20.dp, bottom = bottomContentPadding),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             items(items = workouts, key = { it.id }) { workout ->
@@ -494,7 +523,6 @@ private fun HistoryTab(
                     onClick = { onViewDetail(workout.id) }
                 )
             }
-            item { Spacer(modifier = Modifier.height(100.dp)) }
         }
     }
 }
