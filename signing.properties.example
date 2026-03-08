@@ -1,0 +1,6 @@
+# Copy this file to signing.properties and fill in your release keystore values.
+# The build also accepts the same keys via environment variables.
+RELEASE_STORE_FILE=path/to/release.keystore
+RELEASE_STORE_PASSWORD=change-me
+RELEASE_KEY_ALIAS=change-me
+RELEASE_KEY_PASSWORD=change-me

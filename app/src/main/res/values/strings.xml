@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FitPulse Pro</string>
+    <string name="app_tagline">Your Ultimate Fitness Companion</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_workouts">Workouts</string>
+    <string name="nav_nutrition">Nutrition</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_learn">Learn</string>
+
+    <!-- Home Screen -->
+    <string name="welcome_back">Welcome back,</string>
+    <string name="today_summary">Today\'s Summary</string>
+    <string name="calories_burned">Calories Burned</string>
+    <string name="steps_taken">Steps Taken</string>
+    <string name="active_minutes">Active Minutes</string>
+    <string name="water_intake">Water Intake</string>
+    <string name="quick_start">Quick Start</string>
+    <string name="daily_streak">Daily Streak</string>
+    <string name="ai_coach">AI Coach</string>
+
+    <!-- Workout -->
+    <string name="start_workout">Start Workout</string>
+    <string name="workout_history">Workout History</string>
+    <string name="custom_workout">Custom Workout</string>
+    <string name="workout_templates">Templates</string>
+    <string name="rest_timer">Rest Timer</string>
+    <string name="sets">Sets</string>
+    <string name="reps">Reps</string>
+    <string name="weight_label">Weight</string>
+    <string name="duration">Duration</string>
+    <string name="finish_workout">Finish Workout</string>
+    <string name="add_exercise">Add Exercise</string>
+
+    <!-- Workout Categories -->
+    <string name="cat_chest">Chest</string>
+    <string name="cat_back">Back</string>
+    <string name="cat_shoulders">Shoulders</string>
+    <string name="cat_arms">Arms</string>
+    <string name="cat_legs">Legs</string>
+    <string name="cat_core">Core</string>
+    <string name="cat_cardio">Cardio</string>
+    <string name="cat_full_body">Full Body</string>
+    <string name="cat_stretching">Stretching</string>
+    <string name="cat_yoga">Yoga</string>
+
+    <!-- Nutrition -->
+    <string name="log_meal">Log Meal</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="snacks">Snacks</string>
+    <string name="calories">Calories</string>
+    <string name="protein">Protein</string>
+    <string name="carbs">Carbs</string>
+    <string name="fats">Fats</string>
+    <string name="fiber">Fiber</string>
+    <string name="macro_breakdown">Macro Breakdown</string>
+    <string name="daily_goal">Daily Goal</string>
+    <string name="remaining">Remaining</string>
+
+    <!-- Progress -->
+    <string name="body_weight">Body Weight</string>
+    <string name="body_fat">Body Fat %</string>
+    <string name="measurements">Measurements</string>
+    <string name="progress_photos">Progress Photos</string>
+    <string name="weekly_report">Weekly Report</string>
+    <string name="monthly_report">Monthly Report</string>
+    <string name="personal_records">Personal Records</string>
+    <string name="bmi">BMI</string>
+
+    <!-- Learn -->
+    <string name="exercise_library">Exercise Library</string>
+    <string name="fitness_articles">Fitness Articles</string>
+    <string name="workout_tips">Workout Tips</string>
+    <string name="nutrition_guides">Nutrition Guides</string>
+    <string name="muscle_groups">Muscle Groups</string>
+
+    <!-- Social -->
+    <string name="challenges">Challenges</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="achievements">Achievements</string>
+    <string name="community">Community</string>
+
+    <!-- Profile -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="data_export">Export Data</string>
+    <string name="theme">Theme</string>
+    <string name="units">Units</string>
+    <string name="about">About</string>
+
+    <!-- Onboarding -->
+    <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="finish_setup">Finish Setup</string>
+    <string name="whats_your_goal">What\'s your fitness goal?</string>
+    <string name="lose_weight">Lose Weight</string>
+    <string name="build_muscle">Build Muscle</string>
+    <string name="stay_fit">Stay Fit</string>
+    <string name="improve_endurance">Improve Endurance</string>
+    <string name="increase_flexibility">Increase Flexibility</string>
+
+    <!-- General -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="done">Done</string>
+    <string name="loading">Loading…</string>
+    <string name="no_data">No data yet</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="retry">Retry</string>
+
+    <!-- Mindfulness -->
+    <string name="meditation">Meditation</string>
+    <string name="breathing">Breathing Exercise</string>
+    <string name="sleep_tracking">Sleep Tracking</string>
+    <string name="stress_level">Stress Level</string>
+</resources>

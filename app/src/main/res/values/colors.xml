@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors -->
+    <color name="primary">#FF6C63FF</color>
+    <color name="primary_variant">#FF5A52E0</color>
+    <color name="secondary">#FF00E5FF</color>
+    <color name="secondary_variant">#FF00B8D4</color>
+    <color name="accent">#FFFF6B6B</color>
+
+    <!-- Background Colors -->
+    <color name="background_dark">#FF0D0D0D</color>
+    <color name="surface_dark">#FF1A1A2E</color>
+    <color name="card_dark">#FF16213E</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB0B0B0</color>
+    <color name="text_tertiary">#FF707070</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#FF6C63FF</color>
+    <color name="gradient_middle">#FF9D4EDD</color>
+    <color name="gradient_end">#FFFF6B6B</color>
+
+    <!-- Status Colors -->
+    <color name="success">#FF00E676</color>
+    <color name="warning">#FFFFAB40</color>
+    <color name="error">#FFFF5252</color>
+    <color name="info">#FF448AFF</color>
+
+    <!-- Chart Colors -->
+    <color name="chart_1">#FF6C63FF</color>
+    <color name="chart_2">#FF00E5FF</color>
+    <color name="chart_3">#FFFF6B6B</color>
+    <color name="chart_4">#FF00E676</color>
+    <color name="chart_5">#FFFFAB40</color>
+</resources>
